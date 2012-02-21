@@ -7,12 +7,14 @@ Show: <%= link_to 'Users', users_path %> | Posts<hr/>
 		<th style="background-color: #efefef; padding: 5px">URL</th>
 		<th style="background-color: #efefef; padding: 5px">Submitter</th>
 		<th></th>
+		<th></th>
 	  </tr>
   
 	  <% @posts.each do |p| %>
 		<tr>
 			<td><%= link_to p.url, post_path(p) %></td>
 			<td><%= p.user.name %></td>
+			<td><%= link_to 'Edit', edit_post_path(p) %></td>
 			<td><%= link_to 'Delete', p, :confirm => 'Really delete this post?', :method => :delete %></td>
 		 </tr>
 	  <% end %>

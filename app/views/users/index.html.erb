@@ -13,7 +13,7 @@ Show: Users | <%= link_to 'Posts', posts_path %><hr/>
 		<tr>
 			<td><%= link_to u.name, edit_user_path(u) %></td>
 			<td><%= u.email %></td>
-			<td><%= link_to 'Destroy', u, :confirm => 'Are you sure?', :method => :delete %></td>
+			<td><%= link_to 'Destroy', u, confirm: 'Are you sure?', method: :delete %></td>
 		 </tr>
 	  <% end %>
 	  
