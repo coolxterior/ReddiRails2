@@ -1,0 +1,17 @@
+<%= form_for(@post, :remote => true) do |f| %>
+	
+	<div class="field">
+		<%= f.label :url %><br/>
+		<%= f.text_field :url %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :user_id %><br/>
+		<%= f.select :user_id, User.all.collect {|u| [u.name, u.id]} %>
+	</div>
+	
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+
+<% end %>
